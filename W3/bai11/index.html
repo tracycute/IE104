@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Form đăng nhập</title>
+</head>
+<body>
+    <div class="box">
+        <table>
+            <tr>
+                <td colspan="2" id="fdn">Form đăng nhập</td>
+            </tr>
+            <tr>
+                <td class="title">Tên người dùng</td>
+                <td><input type="text" class="nhap" id="tendn"></td>
+            </tr>
+            <tr>
+                <td class="title">Mật khẩu</td>
+                <td><input type="password" name="" id="pass" class="nhap"></td>
+            </tr>
+            <tr>
+                <td colspan="2" >
+                    <div class="bton">
+                        <button id="dn" onclick="dangnhap()">Đăng nhập</button>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+<script>
+    function dangnhap(){
+        let tendn = document.getElementById("tendn").value;
+        let pass=document.getElementById("pass").value;
+            alert("Đăng nhập thành công!!! \nChào mừng " + tendn + " \nXác nhận mật khẩu của bạn là : " + pass)
+        }
+</script>
+
+</html>

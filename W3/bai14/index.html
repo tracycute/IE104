@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="heading1">LAPTOP DÀNH CHO HỌC TRỰC TUYẾN</h1>
+    <p class="p1">Do ảnh hưởng của dịch COVID-19, trong năm học mới này, nhiều học sinh tại một số tỉnh, thành phố như Hà Nội, TP.HCM 
+        sẽ phải tiến hành học tập qua hình thức online (trực tuyến), dẫn đến nhu cầu tìm mua máy tính xách tay (laptop) để 
+        học online tăng cao so với mọi năm. Các mẫu laptop hỗ trợ tốt trong học trực tuyến có thể tham khảo:</p>
+    <div class="Announcing">
+        <div>
+            <img src="./img/01_.jpg" alt="">
+            <h2>SURFACE LAPTOP 3 13.5</h2>
+            <div class="info">
+                @Ngọc Hoàng 09 Sep 2021 (Đã xem: 1024) 
+            </div>
+            <div class="describe">
+                Thông tin sản phẩm và bảo hành <br>
+                Tình trạng: Sản phẩm mới 100%, nguyên seal <br>
+                Bảo hành: 12 tháng, 1 đổi 1 theo chính sách của Microsoft <br>
+                Phụ kiện: Máy, Sạc, Full Box <br>
+            </div>
+            <div id="dt1"></div>
+            <button onclick="dt1(this)">Đọc tiếp...</button>
+        </div>
+        <div>
+            <img src="./img/02.jpg" alt="">
+            <h2>Laptop Samsung X180 Barbie</h2>
+            <div class="info">
+                @Minh Anh 08 Sep 2021 (Đã xem: 979) 
+            </div>
+            <div class="describe">
+                Thông tin sản phẩm và bảo hành <br>
+                Tình trạng: Sản phẩm mới 100%, nguyên seal <br>
+                Bảo hành: 24 tháng, 1 đổi 1 theo chính sách của SamSung<br>
+                Phụ kiện: Máy, Sạc, Full Box <br>
+            </div>
+            <div id="dt2"></div>
+            <button onclick="dt2(this)">Đọc tiếp...</button>
+        </div>
+        <div>
+            <img src="./img/04.jpg" alt="">
+            <h2>ThinkPad X1 Carbon Gen 9</h2>
+            <div class="info">
+                @Ngọc Ánh 06 Sep 2021 (Đã xem: 530) 
+            </div>
+            <div class="describe">
+                Thông tin sản phẩm và bảo hành <br>
+                Tình trạng: Sản phẩm mới 100%, nguyên seal <br>
+                Bảo hành: 18 tháng, 1 đổi 1 theo chính sách của Lenovo <br>
+                Phụ kiện: Máy, Sạc, Full Box <br>
+            </div>
+            <div id="dt3"></div>
+            <button  onclick="dt3(this) ">Đọc tiếp...</button>
+        </div>
+    </div>
+</body>
+<script>
+    function dt1(e){
+        let ht1 = `<p> Giá : 15 triệu </p> <p> Giá trên chưa bao gồm VAT</p>`
+        document.getElementById("dt1").innerHTML = ht1;
+        e.setAttribute("class", "hidden");
+    }
+    function dt2(e){
+        let ht2 = `<p> Giá : 17 triệu </p> <p> Giá trên chưa bao gồm VAT</p>`
+        document.getElementById("dt2").innerHTML = ht2;
+        e.setAttribute("class", "hidden");
+    }
+    function dt3(e){
+        let ht3 = `<p> Giá : 20 triệu </p> <p> Giá trên chưa bao gồm VAT</p>`
+        document.getElementById("dt3").innerHTML = ht3;
+        e.setAttribute("class", "hidden");
+    }
+</script>
+</html>

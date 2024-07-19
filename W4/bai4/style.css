@@ -1,0 +1,69 @@
+body{
+    background: linear-gradient(to right, #94b185 0%, #2d4f8c 100%);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+    width: 20%;
+    margin: 200px auto;
+}
+table {
+    padding: 10px;
+    width: 100%;
+    background-color: whitesmoke;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+figcaption{
+    padding: 10px 0;
+    font-size: 24px;
+    background-color: #4169E3;
+    color: white;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    text-align: center;
+}
+label{
+    font-size: 14px;
+}
+input{
+    width: 90%;
+}
+select{
+    width: 92%;
+}
+button{
+    margin-top: 10px;
+    text-align: center;
+    padding: 10px 50px;
+    background-color: #00BFFE;
+    border-radius: 5px;
+    color: white;
+}
+#chieucao{
+    color: red;
+}
+.al-center{
+    text-align: center;
+}
+h2{
+    margin: 4px;
+}
+p{
+    margin: 4px;
+}
+tr{
+    display: flex;
+    justify-content: center;
+}
+td:has(input), td:has(select) {
+    width: 100%;
+}
+#ketqua p:nth-child(2){
+    color: blue;
+    font-size: 24px;
+}
+#ketqua p:nth-child(3),:nth-child(4){
+    color: red;
+    font-weight: bold;
+    font-size: 16px;
+}

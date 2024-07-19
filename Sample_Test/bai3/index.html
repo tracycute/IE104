@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-danh-gia">
+
+        <h1>ĐÁNH GIÁ</h1>
+        <div class="comments" id="comments">
+            
+            <div class="comment">
+                <div>@ <span class="red-text">Yến Nhi</span> </div>
+                <div class="date">21:56 Thứ 5 ngày 09/09/2021</div>
+                <div>
+                    <p>Đã mua , đã sử dụng , máy chạy êm , cầm chắc tay hơn cải trước mình dùng . shop tư vẫn nhiệt tình , mùa dịch mà giao hàng vẫn nhanh . 
+                        anh ship thì quả ok luôn . mình đặt lỡ nhắn đc nhà mẹ đẻ , đến khi gọi nhận hàng mình bảo địa chỉ khác , anh ship vẫn vui vẻ đồng ý ... 
+                        nói chung là tuyệt .</p>
+                </div>
+            </div>
+            <div class="comment">
+                <div>@ <span class="red-text">Phạm Triết</span> </div>
+                <div class="date">06:39 Thứ 5 ngày 09/09/2021</div>
+                <div>
+                    <p>Tông đơ rất đẹp , nhưng bộ kéo cắt tỉa thì như đồ chơi trẻ em 😂😂 , đóng gói cẩn thận , giao hàng nhiệt tình . cảm ơn TIKI .</p>
+                </div>
+            </div>
+            <div class="comment">
+                <div>@ <span class="red-text">Chí Phèo</span> </div>
+                <div class="date">12:26 Thứ 3 ngày 07/09/2021</div>
+                <div>
+                    <p>Tông đơ nhìn chắc chắn , lưỡi dao sắc bén , cầm vừa tay , thao tác dễ , kéo tặng kèm cũng dễ sử dụng . Sẽ dùng thực tế đề trải nghiệm thêm .</p>
+                </div>
+            </div>
+            <div class="comment">
+                <div>@ <span class="red-text">Tony Phùng</span> </div>
+                <div class="date">10:45 Thứ 2 ngày 06/09/2021</div>
+                <div>
+                    <p>Rất hài lòng ( giao hàng nhanh hàng đúng như trên hình , cắt thử rất Ok Thank's Shop .</p>
+                </div>
+            </div>
+            
+        </div>
+        <form>
+            <h2 class="form-title">Thêm Đánh Giá</h2>
+            <label for="username">Tên</label>
+            <input type="text" id="username" />
+            <label for="comment_content">Nội Dung</label>
+            <textarea type="text" id="comment_content" rows="4"></textarea>
+            <button type="button" onclick="subsubmit()">Đăng Bình Luân</button>
+        </form>
+    </div>
+
+
+    <script>
+
+        
+        let comments = document.getElementById("comments");
+
+        function subsubmit() {
+            let username = document.getElementById("username").value;
+            let comment_content = document.getElementById("comment_content").value;
+            let today = new Date();
+            let dd = String(today.getDate()).padStart(2, '0');
+            let mm = String(today.getMonth() + 1).padStart(2, '0');
+            let time = String(today.getHours()) + ':' + String(today.getMinutes());
+            let weekday = today.getDay();
+            if (weekday == 0)
+                weekday = " Chủ Nhật"
+            else 
+                weekday = " Thứ " + String(weekday + 1);
+            let yyyy = today.getFullYear();
+
+            today = time + weekday + " " + dd + '/' + mm + '/' + yyyy;
+
+            let new_comment = document.createElement("div");
+            new_comment.setAttribute("class", "comment");
+            new_comment.innerHTML = `<div>@ <span class="red-text">${username}</span> </div>
+                <div class="date">${today}</div>
+                <div>
+                    <p>${comment_content}</p>
+                </div>`
+            comments.appendChild(new_comment)
+        }
+    </script>
+
+</body>
+</html>

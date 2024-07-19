@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="border: 1px solid black; width: 20%; margin: 200px auto;">
+        <h3 style="text-align: center;">GIẢI PHƯƠNG TRÌNH BẬC I</h3>
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <input type="text" placeholder="Hệ số a" id="a"> <br>
+            <input type="text" placeholder="Hệ số b" id="b"> <br>
+            <button onclick="giaipt.giai()"> Giải phương trình </button>
+        </div>
+        <p id="ketqua"></p>
+    </div>
+</body>
+<script>
+    let giaipt = { 
+        a :'',
+        b :'',
+        giai: function(){
+            this.a = document.getElementById("a").value;
+            this.b = document.getElementById("b").value;
+
+            // giai 
+            if (this.a == 0 && this.b == 0) {
+                document.getElementById("ketqua").innerHTML =`<p style="text-align: center;"> KẾT QUẢ <br> Phương trình có vô số nghiệm </p>`
+            }
+                else if (this.a == 0 && this.b != 0)
+                {
+                document.getElementById("ketqua").innerHTML =`<p style="text-align: center;"> KẾT QUẢ <br> Phương trình vô  nghiệm </p>`
+                }
+            else {
+                let kq = -this.b / this.a; 
+                document.getElementById("ketqua").innerHTML =`<p style="text-align: center;"> KẾT QUẢ <br> NGHIỆM x = ${kq} </p>`
+            }
+        }
+    }
+</script>
+</html>

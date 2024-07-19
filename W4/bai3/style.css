@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+h1{
+    color: blue;
+}
+.form_lh{
+    width: 60%;
+    margin: 200px auto;
+    padding: 20px;
+    border: 1px solid black;
+}
+.lh{
+    display: flex;
+    padding: 20px;
+}
+.lh-left{
+    padding: 10px;
+    line-height: 30px;
+    width: 60%;
+}
+.lh-left > p{
+    color: gray;
+}
+.info{
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    color: grey;
+}
+.lh-right{
+    padding: 10px;
+    line-height: 30px;
+    width: 100%;
+}
+.lh-right > p{
+    color: blueviolet;
+}
+input{
+    width: 97%;
+}
+textarea{
+    width: 97%;
+}
+button{
+    display: flex;
+    align-items: center;
+    background-color: #5F9EA0;
+    color: white;
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <table>
+        <figcaption>TÍNH CHỈ SỐ BMI</figcaption>
+        <tbody>
+            <tr>
+            <td>
+                <label for="">Nhập cân nặng?</label>
+                <br />
+                <input type="text" id="cannang" />
+            </td>
+            </tr>
+            <tr>
+            <td>
+                <label for="">Nhập chiều cao?</label><br />
+                <input type="text" id="chieucao" />
+            </td>
+            </tr>
+            <tr>
+            <td>
+                <label for="">Chọn loại tuổi?</label><br />
+                <select name="" id="tuoi">
+                <option value="1">Trung niên</option>
+                <option value="2">Trung niên, Già lớn tuổi</option>
+                <option value="3">Già, lớn tuổi</option>
+                </select>
+            </td>
+            </tr>
+            <tr>
+            <td>
+                <button id="tinh">TÍNH BMI</button>
+            </td>
+            </tr>
+
+            <tr>
+            <td>
+                <div id="ketqua" class="al-center">
+                <h2>KẾT QUẢ</h2>
+                <p>31.11</p>
+                <p>BÉO PHÌ ĐỘ 1</p>
+                <p>Khám định kỳ</p>
+                </div>
+            </td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+    </body>
+    <script>
+    let tinh_bmi = {
+        cannang: undefined,
+        chieucao: undefined,
+        tuoi: undefined,
+        tinh: function () {
+        this.cannang = document.getElementById("cannang").value;
+        this.chieucao = document.getElementById("chieucao").value;
+        this.tuoi = document.getElementById("tuoi").value;
+        let kq = (this.cannang / this.chieucao ** 2).toFixed(2);
+
+        bang_bmi = {
+            'dc': {
+                'max': 18.5,
+                'phan_loai': 'DƯỚI CHUẨN',
+                'khuyen_nghi': '',
+
+            },
+            'bt': {
+                'max': 25.0,
+                'phan_loai': 'BÌNH THƯỜNG',
+                'khuyen_nghi': '',
+
+            },
+            'tc': {
+                'max': 30.0,
+                'phan_loai': 'THỪA CÂN',
+                'khuyen_nghi': '',
+
+            },
+            'd1': {
+                'max': 35.0,
+                'phan_loai': 'BÉO PHÌ ĐỘ 1',
+                'khuyen_nghi': 'Khám định kỳ',
+            },
+            'd2': {
+                'max': 40.0,
+                'phan_loai': 'BÉO PHÌ ĐỘ 2',
+                'khuyen_nghi': 'Tập thể dục thường xuyên',
+
+            },
+            'd3': {
+                'max': 9999,
+                'phan_loai': 'BÉO PHÌ ĐỘ 3',
+                'khuyen_nghi': 'Hạn chế ăn mỡ động vật',
+
+            },
+        }
+
+        for (let id in bang_bmi) {
+            if (kq < bang_bmi[id]['max']) {
+                // console.log()
+                document.getElementById("ketqua").innerHTML = `
+                <h2>KẾT QUẢ</h2>
+                <p>${kq}</p>
+                <p>${bang_bmi[id]['phan_loai']}</p>
+                <p>${bang_bmi[id]['khuyen_nghi']}</p>`;
+                break
+            }
+        }
+        },
+    };
+    document.getElementById("tinh").addEventListener("click", tinh_bmi.tinh);
+</script>
+</html>

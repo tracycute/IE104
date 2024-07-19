@@ -1,0 +1,118 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: brown ;
+}
+.box1{
+    position: relative;
+    height: 604px;
+    width: 383px;
+    background-image: url(../img/kim-tea-hee.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 100px;
+}
+.box2{
+    position: absolute;
+    background-size: contain;
+    height: 226px;
+    width: 295px;
+    background-image: url(../img/rose.png);
+    background-repeat: no-repeat;
+    bottom: 20px;
+    left: 100px;
+}
+.box3{
+    position: absolute;
+    background-size: contain;
+    height: 376px;
+    width: 613px;
+    background-image: url(../img/nen-hoa-hong.png);
+    background-repeat: no-repeat;
+    bottom: 0;
+    right: 0;
+}
+.box-content{
+    width: 47%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    border: 3px solid palevioletred;
+    top: 50px;
+    left: 360px;
+}
+.box-content1{
+    display: flex;
+}
+.box-content2{
+    flex-grow: 6;
+}
+.box-content3{
+    
+    flex-grow: 4;
+    background-color: #FFCCFF;
+    width: 20%;
+}
+.box-content3 img{
+    width: 100%;
+
+}
+.box-c3{
+    height:50%;
+    padding-right: 8px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: red;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: end;
+}
+.box-c4{
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFCCFF;
+    color: red;
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+
+}
+.list-title{
+    color: red;
+    padding: 10px;
+    font-weight: bold;
+}
+.list-title * {
+    font-weight: normal;
+}
+.list-title::marker {
+    content: '□ ';
+    font-size: 25px;
+}
+li{
+    margin-left: 10px;
+    color: #FFCCFF;
+}
+
+.content{
+    display: flex;
+    margin-left: 30px;
+}
+
+.bold-italic {
+    font-weight: bold;
+    font-style: italic;
+}

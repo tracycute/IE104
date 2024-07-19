@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form_lh">
+        <h1>LIÊN HỆ</h1>
+        <hr color="red">
+        <div class="lh">
+            <div class="lh-left">
+                <p>Thông tin </p>
+                <div class="info">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M12.003 11.73q.668 0 1.14-.475q.472-.475.472-1.143t-.475-1.14q-.476-.472-1.143-.472t-1.14.476q-.472.475-.472 1.143t.475 1.14q.476.472 1.143.472ZM12 21.02q-3.525-3.118-5.31-5.815q-1.786-2.697-1.786-4.909q0-3.173 2.066-5.234Q9.037 3 12 3t5.03 2.062q2.066 2.061 2.066 5.234q0 2.212-1.785 4.909q-1.786 2.697-5.311 5.814Z"/></svg> 
+                Kp 5, P.Linh Trung, Tp.Thủ Đức, Tp.HCM 
+                </div>
+                <div class="info">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M4.615 19q-.69 0-1.152-.462Q3 18.075 3 17.385V6.615q0-.69.463-1.152Q3.925 5 4.615 5h14.77q.69 0 1.152.463q.463.462.463 1.152v10.77q0 .69-.462 1.152q-.463.463-1.153.463H4.615ZM12 12.115l-8-5.23v10.5q0 .269.173.442t.442.173h14.77q.269 0 .442-.173t.173-.442v-10.5l-8 5.23ZM12 11l7.692-5H4.308L12 11ZM4 6.885V6v11.385q0 .269.173.442t.442.173H4V6.885Z"/></svg>
+                info@uit.edu.vn 
+                </div>
+                <div class="info">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M18.93 20q-2.528 0-5.184-1.266q-2.656-1.267-4.944-3.555q-2.27-2.289-3.536-4.935Q4 7.598 4 5.07q0-.45.3-.76T5.05 4h2.473q.408 0 .712.257t.411.658L9.142 7.3q.07.42-.025.733q-.094.313-.332.513L6.59 10.592q.616 1.118 1.361 2.076q.745.959 1.59 1.817q.87.87 1.874 1.62q1.004.749 2.204 1.414l2.139-2.177q.244-.263.549-.347q.305-.083.674-.033l2.104.43q.407.1.661.41q.254.311.254.713v2.435q0 .45-.31.75t-.76.3Z"/></svg>
+                +84 28 372 52002
+                </div>
+            </div>
+                <div class="lh-right">
+                    <p>Hãy liên lạc với chúng tôi bất cứ khi nào!!!</p>
+                    <input type="text" placeholder="Họ và tên" id="hoten"> <br>
+                    <input type="email" placeholder="Địa chỉ e-mail" id="mail"> <br>
+                    <input type="text" placeholder="Tiêu đề bài viết" id="td"> <br>
+                    <textarea name="" cols="30" rows="10" placeholder="Nội dung cần gửi" id="nd"></textarea> <br>
+                    <button onclick="lh.send()">GỬI TIN NHẮN <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="m10.562 15.908l6.396-6.396l-.708-.708l-5.688 5.688l-2.85-2.85l-.708.708l3.558 3.558ZM12.003 21q-1.866 0-3.51-.708q-1.643-.709-2.859-1.924q-1.216-1.214-1.925-2.856Q3 13.87 3 12.003q0-1.866.708-3.51q.709-1.643 1.924-2.859q1.214-1.216 2.856-1.925Q10.13 3 11.997 3q1.866 0 3.51.708q1.643.709 2.859 1.924q1.216 1.214 1.925 2.856Q21 10.13 21 11.997q0 1.866-.708 3.51q-.709 1.643-1.924 2.859q-1.214 1.216-2.856 1.925Q13.87 21 12.003 21ZM12 20q3.35 0 5.675-2.325T20 12q0-3.35-2.325-5.675T12 4Q8.65 4 6.325 6.325T4 12q0 3.35 2.325 5.675T12 20Zm0-8Z"/></svg></button>
+                </div>
+            </div>
+        </div>
+</body>
+<script>
+    let lh ={
+        hoten :'',
+        mail :'',
+        tieude : '',
+        noidung : '',
+
+        send: function(){
+            this.hoten = document.getElementById("hoten").value;
+            this.mail = document.getElementById("mail").value;
+            this.tieude = document.getElementById("td").value;
+            this.noidung = document.getElementById("nd").value;
+
+            confirm (" Họ tên: " + this.hoten +
+                    "\n Email: " + this.mail + 
+                    "\n Tiêu đề: " + this.tieude + 
+                    "\n Nội dung góp ý: \n" + this.noidung 
+                    );                        
+        }
+    };
+</script>
+</html>

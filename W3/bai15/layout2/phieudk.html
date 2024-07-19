@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/phieudk.css">
+</head>
+<body>
+    <div class="phieudk">
+        <h1>Phiếu đăng ký tham gia chương trình khuyến mãi</h1>
+        <table>
+            <tr>
+                <td class="title">Họ tên</td>
+                <td><input type="text" class="nhap" id="hoten"></td>
+            </tr>
+        <tr>
+            <td class="title">
+            Địa chỉ 
+            </td>
+            <td>
+                <textarea name="message" rows="5" cols="50" class="nhap" id="diachi">
+                </textarea>
+            </td>
+        </tr>
+        <tr>
+            <td class="title">Điện thoại</td>
+            <td><input type="tel" name="" id="dt" class="nhap"></td>
+        </tr>
+        <tr>
+            <td class="title">Giới tính</td>
+            <td>
+                <input type="radio" id="nam" name="gioitinh" value="nam">
+                <label for="nam">Nam</label> 
+                <input type="radio" id="nu" name="gioitinh" value="nu">
+                <label for="nu">Nữ</label>
+            </td>
+        </tr>
+        <tr>
+            <td class="title">
+                Nghề nghiệp
+            </td>
+            <td>
+                <select name="" id="nn" class="nhap">
+                    <option value="Giáo viên">Giáo viên
+                    <option value="Bác sĩ">Bác sĩ</option>   
+                    <option value="Học sinh">Học sinh</option>   
+                    </option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="title">Chọn sản phẩm tham gia</td>
+            <td>
+                <select class="nhap" id="sp" size="4">
+                    <option value="Kem đánh răng">Kem đánh răng
+                        <option value="Bột giặt">Bột giặt</option>   
+                        <option value="Dầu gội">Dầu gội</option>   
+                        <option value="Sữa tắm">Sữa tắm</option>   
+                    </option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="title">Dự đoán người tham gia</td>
+            <td>
+                <input type="number" name="" id="dd" class="nhap" placeholder="30000">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" >
+                <div class="bton">
+                    <button id="dy" onclick="dangky()">Đồng ý</button>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" id="dktc"></td>
+        </tr>
+    </table>
+</div>
+<div class="ketqua">
+    <p id="ht"></p>
+</div>
+</body>
+
+<script>
+    function dangky(){
+        let hoten = document.getElementById("hoten").value;
+        let diachi=document.getElementById("diachi").value;
+        let dt=document.getElementById("dt").value;
+        let nn=document.getElementById("nn").value;
+        let sp=document.getElementById("sp").value;
+        let dd=document.getElementById("dd").value;
+        let gt= null
+        
+        if (document.getElementsByName("gioitinh")[0].checked) {
+            gt = "Namm"
+        } else if (document.getElementsByName("gioitinh")[1].checked) {
+            gt = "Nữ"
+        } else {
+            gt = "Vui lòng chọn giới tính"
+        }
+        
+        let hienthi = `<h3>Xác nhận thông tin đăng ký  </h3> <br>
+                        <p>Họ tên : ${hoten}</p> <br>
+                        <p> Địa chỉ : ${diachi}</p> <br>
+                        <p> Điện thoại : ${dt}</p> <br>
+                        <p> Giới tính : ${gt}</p> <br>
+                        <p> Nghề nghiệp : ${nn}</p> <br>
+                        <p> Sản phẩm : ${sp}</p> <br>
+                        <p> Dự doán : ${dd}</p>`
+
+        document.getElementById("dktc").innerText ="Bạn đã đăng ký thành công!!!";
+        document.getElementById("ht").innerHTML = hienthi;
+
+
+    }
+</script>
+</html>

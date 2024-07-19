@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>ĐĂNG KÝ DU LỊCH</h1>
+    <div class="f-dulich">
+        <table>
+            <tr>
+                <td>Họ tên</td>
+                <td><input type="text" id="hoten"></td>
+            </tr>
+            
+            <tr>
+                <td>Địa chỉ</td>
+                <td><textarea cols="40" rows="5" id="diachi"></textarea></td>
+            </tr>
+            
+            <tr>
+                <td class="title">Điện thoại</td>
+                <td><input type="tel" name="" id="dt"></td>
+            </tr>
+            
+            <tr>
+                <td>Khách Việt Nam</td>
+                <td><input type="checkbox" checked id="khachvietnam"></td>
+            </tr>
+            
+            <tr>
+                <td>Chọn tour</td>
+                <td>
+                    <select name="" id="tour">
+                        <option value="Phú Quốc - Côn Đảo">Phú Quốc - Côn Đảo
+                            <option value="Phú Quốc - Vũng Tàu">Phú Quốc - Vũng Tàu</option>   
+                            <option value="Vũng Tàu - Biên Hòa">Vũng Tàu - Biên Hòa</option>   
+                        </option>
+                    </select>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>Phương tiện</td>
+                <td colspan="2">
+                    <input type="radio" id="mb" name="phuongtien" value="Máy bay">
+                    <label for="mb">Máy bay</label> 
+                    <input type="radio" id="xdl" name="phuongtien" value="Xe du lịch">
+                    <label for="xdl">Xe du lịch</label>
+                </td>
+            </tr>
+            
+            <tr>
+                <td colspan="2">
+                    <fieldset><legend>Số lượng đoàn khách</legend>
+                        <label>Người lớn </label><input type="text" id="lon" value="7">
+                        <label>Trẻ em </label><input type="text" id="tre" value="2">
+                    </fieldset>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>Ghi chú thêm</td>
+                <td><textarea rows="5" cols="40" id="gc">Có 2 người lớn trên 70 tuổi
+Có 2 người lớn ăn chay
+2 trẻ em: 10 tuổi, 1 tuổi
+                </textarea></td>
+            </tr>
+            
+            <tr id="submit">
+                <td colspan="2">
+                    <button id="dy" onclick="dangky()">Đồng ý</button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" id="dktc" class="hidden"></td>
+            </tr>
+            <tr>
+                <td colspan="2" id="ht" class="hidden"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+<script>
+    function dangky(){
+        let hoten = document.getElementById("hoten").value;
+        let diachi=document.getElementById("diachi").value;
+        let dt=document.getElementById("dt").value;
+        let tour=document.getElementById("tour").value;
+        let lon=document.getElementById("lon").value;
+        let tre=document.getElementById("tre").value;
+        let gc=document.getElementById("gc").value;
+        let pt= null
+        let kvn= null
+        var checkbox = document.getElementById("khachvietnam");
+
+        // Check khách VN
+        if (checkbox.checked) {
+            kvn = "Phải"
+        } else{
+            kvn= "Không"
+        }
+        
+        //Chọn phương tiện 
+        if (document.getElementsByName("phuongtien")[0].checked) {
+            pt = "Máy bay"
+        } else if (document.getElementsByName("phuongtien")[1].checked) {
+            pt = "Xe du lịch"
+        } else {
+            pt = "Vui lòng chọn phương tiện"
+        }
+
+        let hienthi = ` <h3>Thông tin đăng ký</h3> <br>
+                        <p>Họ tên : ${hoten}</p> <br>
+                        <p> Địa chỉ : ${diachi}</p> <br>
+                        <p> Điện thoại : ${dt}</p> <br>
+                        <p> Là khách Việt Nam : ${kvn}</p> <br>
+                        <p> Tour : ${tour}</p> <br>
+                        <p> Phương tiện : ${pt}</p> <br>
+                        <p> Số lượng khách :  người lớn : ${lon}, trẻ em : ${tre}</p> <br>
+                        <p> Ghi chú : ${gc}</p>`
+
+        document.getElementById("dktc").innerText ="Bạn đã đăng ký thành công!!!";
+        document.getElementById("dktc").setAttribute("class", "");
+        document.getElementById("ht").innerHTML = hienthi;
+        document.getElementById("ht").setAttribute("class", "");
+
+    }
+</script>
+</html>

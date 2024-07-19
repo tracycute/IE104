@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Bài Tập Ngôn Ngữ HTML</h1>
+    </header>
+
+    <div class="container">
+      <div class="menu">
+        <div class="menu-option">
+          <ul>
+            <li data="./me.html" class="active">Mẹ</li>
+            <li data="./phuquoc.html">Phú Quốc</li>
+            <li>Định dạng văn bản</li>
+            <li>Truyện ngụ ngôn</li>
+            <li>Shop hoa tươi</li>
+            <li>Excite@Home</li>
+            <li>Chương trình học</li>
+            <li>Double Rich</li>
+            <li>Free.com</li>
+            <li data="./vietnam.html">Việt Nam</li>
+            <li>Form đăng nhập</li>
+            <li data="./phieudk.html">Phiếu đăng ký</li>
+            <li>Đặt tour</li>
+          </ul>
+        </div>
+
+        <img src="./images/nen-hoa-muc-luc.png" alt="" class="bg-bottom" />
+      </div>
+      <div class="content">
+        <iframe
+          id="iframe"
+          src="./me.html"
+          frameborder="0"
+          width="100%"
+          height="100%"
+        ></iframe>
+      </div>
+    </div>
+  </body>
+  <script>
+
+    let list = document.querySelectorAll("li");
+    let iframe = document.getElementById("iframe");
+
+    list.forEach(function (item, index) {
+      item.addEventListener("click", function () {
+        list.forEach(function (li) {
+          li.classList.remove("active");
+        });
+
+        list[index].classList.add("active");
+        var src = list[index].getAttribute("data");
+        iframe.setAttribute("src", src);
+      });
+    });
+    
+  </script>
+</html>

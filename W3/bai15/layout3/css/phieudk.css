@@ -1,0 +1,78 @@
+*{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+}
+.phieudk{
+    width: 60%;
+    margin: 30px auto;
+    align-items: center;
+}
+table{
+    width: 650px;
+    line-height: 50px;
+    box-shadow: 10px 5px 5px blue;
+    border-radius: 8px;
+    background: url(../img/khuyen-mai.png) bottom left;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-color: lightcyan;
+    font-size: 16px;
+    font-weight: bold;
+    color: blue;
+}
+.nhap{
+    background-color:rgba(99, 148, 237, 0.5);
+    border-style: dotted;
+    border-color: darkblue;
+    border-radius: 10px;
+}
+h1{
+    font-size: 27px;
+    color: white;
+    margin: 12px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 1px 1px 2px blue, 0 0 0.5em blue, 0 0 0.1em blue;
+}
+h3{
+    color: red;
+}
+#dktc{
+    color: magenta;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+}
+.bton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+#dy{
+    width: 100px;
+    background:  linear-gradient(to bottom, #0000cc 0%, #66ffff 100%);;
+    color: white;
+    font-weight: bold;
+    align-items: center;
+}
+.title{
+    text-align: end;
+}
+td{
+    margin-left: 50px;
+}
+#sp{
+    width: 150px;
+    padding: 5px;
+}
+#ht{
+    text-align: start;
+}
+.ketqua{
+    width: 100vw;
+    line-height: 10px;
+    margin: 0 30% ;
+}

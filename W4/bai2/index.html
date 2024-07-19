@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Góp ý</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form">
+        <h1>ĐÓNG GÓP Ý KIẾN VỀ SẢN PHẨM</h1>
+        <p>Góp ý của bạn sẽ được chúng tôi xem xét, vui lòng nhập tiếng việt có dấu <br>
+            Các ý kiến đóng nên viết chi tiết rõ ràng, kèm theo các minh chứng xác thực thời gian và địa điểm ( nếu có).
+        </p>
+        <div class="b-form">
+
+            <table>
+                <tr>
+                    <td>
+                        <input class="nhap" type="text" placeholder="Họ và tên" id="hoten">
+                    </td>
+                    <td>
+                        <input class="nhap" type="text" placeholder="Mã thẻ" id="mathe"> 
+                    </td>
+                </tr>
+                <tr>
+            <td>
+                <input class="nhap" type="tel" placeholder="Số điện thoại" id="dt">
+            </td>
+            <td>
+                <input class="nhap" type="text" placeholder="E-mail" id="mail"> 
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <select class="nhap" name="" id="khachhang">
+                    <option value="" disabled selected>Chọn loại khách hàng
+                        <option value="Khách hàng 1"> khách hàng 1</option>
+                        <option value="Khách hàng 2"> khách hàng 2</option>
+                        <option value="Khách hàng 3"> khách hàng 3</option>
+                    </option>
+                </select>
+            </td>
+            <td>
+                <input class="nhap" type="text" placeholder="Mã hóa đơn" id="mahd">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <textarea class="nhap" name="message" id="chitiet" cols="100" rows="10" placeholder="Nhập chi tiết mô tả"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button onclick="donggop.send()">Gửi góp ý</button>
+            </td>
+        </tr>
+    </table>
+</div>
+    </div>
+</body>
+<script>
+    let donggop ={
+        hoten :'',
+        mathe :'',
+        dt :'',
+        mail :'',
+        khachhang:'',
+        mahd : '',
+        chitiet : '',
+
+        send: function(){
+            this.hoten = document.getElementById("hoten").value;
+            this.mathe = document.getElementById("mathe").value;
+            this.dt = document.getElementById("dt").value;
+            this.mail = document.getElementById("mail").value;
+            this.khachhang = document.getElementById("khachhang").value;
+            this.mahd = document.getElementById("mahd").value;
+            this.chitiet = document.getElementById("chitiet").value;
+
+            confirm (" Họ tên: " + this.hoten +
+                    "\n Mã thẻ: " + this.mathe + 
+                    "\n Số điện thoại: " + this.dt + 
+                    "\n Email: " + this.mail + 
+                    "\n Loại khách hàng: " + this.khachhang + 
+                    "\n Mã hoá đơn: " + this.mahd + 
+                    "\n Nội dung góp ý: " + this.chitiet 
+                    );                        
+        }
+    };
+</script>
+</html>

@@ -1,0 +1,75 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: steelblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif sans-serif;
+    height: 100vh;
+}
+.container{
+    background-color: white;
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+}
+.logo{
+    text-align: center;
+}
+.banner{
+    text-align: center;
+    margin-top: 40px;
+}
+.content{
+    text-align: center;
+    color: steelblue;
+    margin: 30px;
+    font-size: 17px;
+}
+.member{
+    display: flex;
+    line-height: 60px;
+    justify-content: space-between;
+    margin: 0 100px;
+}
+.member > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.member img{
+    height: 130px;
+}
+.member p{
+    color: steelblue;
+    font-size: 16px;
+    text-align: center;
+}
+.question{
+    margin: 10px;
+    text-align: center;
+    color: steelblue;
+    font-size: 11px;
+    font-family: monospace;
+}
+.button{
+    display: flex;
+    margin: 40px 200px;
+    justify-content: space-between;
+}
+.button img{
+    height: 140%;
+}
+.footer{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    text-align: center;
+}
+.text-highlight{
+    color: red;
+    text-decoration: underline;
+}
+.text-bold{
+    font-weight: bold;
+}

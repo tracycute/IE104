@@ -1,0 +1,110 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(#fce5f9, #e2fbf5);
+}
+.login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 5px;
+    background-image: conic-gradient(#e2fbf5 15%, #fce5f9 15%, #fce5f9 65%, #e2fbf5 65%);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, .description {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.input-box {
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 0.25rem;
+}
+
+.input-box > div {
+    width: 100%;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    all: unset;
+    flex-grow: 1;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.username-container {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}  
+
+.password-container {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.buttons-container {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.input-box:has(.login-btn) {
+  margin-top: 0.75rem;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.forgot-btn {
+    text-align: center;
+}
+
+.signup-btn {
+    padding: 0.75rem 1.5rem;
+    background-color: #e2fbf5;
+}
+.signup-btn > svg {
+    margin-left: 0.5rem;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+}

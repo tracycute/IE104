@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dong-ho">
+        <div id="thoi-gian"></div>
+    </div>
+    <script>
+      let hour = 12;
+      let minute = 30;
+      let second = 0;
+      function dem_nguoc(hour, minute, second) {
+          hour   = String(hour).padStart(2, '0');
+          minute = String(minute).padStart(2, '0');
+          second = String(second).padStart(2, '0');
+          const chuoi_thoi_gian = `${hour}:${minute}:${second} AM`;
+
+          document.getElementById('thoi-gian').innerText = chuoi_thoi_gian;
+      }
+
+      dem_nguoc(hour, minute, second);
+
+      setInterval(() => {
+        if (second > 0) {
+            second--;
+        } else if (minute > 0) {
+            minute--;
+            second = 59;
+        } else if (hour > 0) {
+            hour--;
+            minute = 59;
+            second = 59;
+        }
+
+        dem_nguoc(hour, minute, second);
+      }, 1000);
+
+    </script>
+</body>
+</html>

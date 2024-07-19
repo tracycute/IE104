@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.form_login{
+    width: max-content;
+    margin: 200px auto;
+    padding: 20px;
+    background-color: black;
+    color: gray;
+}
+.login{
+    display: flex;
+    flex-direction: row;
+}
+.login-left1{
+    margin: 10px;
+    width: max-content;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    display: flex;
+    padding: 0 10px;
+}
+.login-left1 > input{
+    all:unset;
+    color: white;
+}
+.login-right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    color: white;
+    background-color: tomato;
+}
+.login-left1 > svg{
+    width: 10%;
+}
+.login-right > svg {
+    width: 60%;
+}

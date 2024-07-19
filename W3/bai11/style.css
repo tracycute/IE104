@@ -1,0 +1,60 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box{
+    width: 35em;
+    height: 17em;
+    border-radius: 8px;
+    border-style: dotted;
+    border-color: maroon;
+    background:url(./img/login.jpg)  right;
+    background-size: 40%;
+    background-repeat: no-repeat;
+    line-height: 30px;
+}
+table{
+    margin: 20px auto;
+    font-size: 16px;
+    color: black;
+}
+.nhap{
+    background-color:rgba(237, 99, 99, 0.5);
+    border-style: dotted;
+    border-color: maroon;
+    border-radius: 10px;
+}
+#fdn{
+    color: red;
+    font-size: 38px;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.bton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+#dn{
+    width: 100px;
+    height: 25px;
+    background: linear-gradient(to bottom, #cc0000 70%, #ff5050 100%);;
+    color: white;
+    border: 1px solid gray;
+    border-radius: 10px;
+    font-weight: bold;
+    align-items: center;
+}
+.title{
+    text-align: end;
+}
+
